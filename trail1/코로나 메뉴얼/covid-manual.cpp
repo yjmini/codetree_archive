@@ -6,14 +6,10 @@ int main() {
 
     char symptom[3];
     int temp[3];
-    int cnt;
+    int cnt = 0;
 
     for (int i = 0; i < 3; i++) {
         cin >> symptom[i] >> temp[i];
-        
-    }
-
-    for (int i = 0; i < 3; i++) {
         if (symptom[i] == 'Y' && temp[i] >= 37) {
             cnt++;
         }
