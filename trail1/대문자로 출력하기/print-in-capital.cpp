@@ -16,12 +16,9 @@ int main() {
         }
     }
     for (int i = 0; i < s2.length(); i++) {
-        if (s2[i] >= 'a' && s2[i] <= 'z') {
-            s2[i] = s2[i] -'a' + 'A';
-        }
+        cout << (char)toupper(s2[i]);
     }
 
-    cout << s2;
 
     return 0;
 }
