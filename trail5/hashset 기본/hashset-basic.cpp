@@ -1,36 +1,32 @@
 #include <iostream>
 #include <unordered_set>
+#include <string>
 
 using namespace std;
 
-int n;
-string command[100000];
-int x[100000];
-
-unordered_set<int> us;
+unordered_set<int> s;
 
 int main() {
+    int n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> command[i] >> x[i];
-        if (command[i] == "add") {
-            us.insert(x[i]);
+    
+    for(int i = 0; i < n; i++) {
+        string command; 
+        int x;
+        cin >> command >> x;
+
+        if(command == "add") {
+            s.insert(x);
         }
-        else if (command[i] == "remove") {
-            us.erase(x[i]);
+        else if(command == "remove") {
+            s.erase(x);
         }
-        else if (command[i] == "find") {
-            if (us.find(x[i]) != us.end()) {
+        else {
+            if(s.find(x) != s.end())
                 cout << "true\n";
-            }
-            else {
+            else
                 cout << "false\n";
-            }
         }
     }
-
-    // Please write your code here.
-    
-
     return 0;
 }
