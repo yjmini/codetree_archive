@@ -18,11 +18,13 @@ int main() {
     for (int i = 0; i < m; i++) {
         int t;
         cin >> t;
-        if (s.lower_bound(t) == s.end()) {
+
+        auto it = s.lower_bound(t);
+        if (it == s.end()) {
             cout << -1 << '\n';
         }
         else {
-            cout << *s.lower_bound(t) << '\n';
+            cout << *it << '\n';
         }
     }
     return 0;
