@@ -13,13 +13,13 @@ int main() {
     for (int i = 0; i < n; i++) {
         int x, y;
         cin >> x >> y;
-        s.insert(make_pair(x, y));
+        s.insert({x, y});
     }
 
     for (int i = 0; i < m; i++) {
         int x, y;
         cin >> x >> y;
-        auto it = s.lower_bound(make_pair(x, y));
+        auto it = s.lower_bound({x, y});
         if (it != s.end()) {
             cout << it->first << " " << it->second << '\n';
         }
